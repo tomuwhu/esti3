@@ -12,3 +12,10 @@ export const session = sqliteTable("session", {
     userId: text('user_id').notNull().references(() => user.id),
     expiresAt: integer('expires_at', { mode: 'timestamp' }).notNull()
 });
+
+export const konyvek = sqliteTable("konyvek", {
+    id: text('id').primaryKey(),
+    cim: text('cim'),
+    szerzo: text('szerzo'),
+    leiras: text('leiras')
+});

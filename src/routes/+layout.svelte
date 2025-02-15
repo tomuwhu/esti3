@@ -4,19 +4,21 @@
 	let { children } = $props()
 	const menu = [
 		{ label: 'Kezdőoldal', href: '/' },
+		{ label: 'Könyvek', href: '/konyvek' },
 		{ label: 'Ki- és bejelentkezés', href: '/login' }
 	]
-	setInterval(() => {
-		path = $page.url.pathname
-	}, 1000)
-
+	const f = () => {
+		setTimeout(() => {
+			path = $page.url.pathname
+		}, 100)
+	}
 </script>
 <div>
 {#each menu as item}
     {#if item.href === path}
-		<a class="ui small blue button" href={item.href}>{item.label}</a>
+		<a onclick={f} class="ui small blue button" href={item.href}>{item.label}</a>
 	{:else}
-		<a class="ui small button" href={item.href}>{item.label}</a>
+		<a onclick={f} class="ui small button" href={item.href}>{item.label}</a>
 	{/if}
 {/each}
 </div>
