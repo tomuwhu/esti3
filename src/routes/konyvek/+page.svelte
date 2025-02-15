@@ -24,11 +24,12 @@
             <div class="meta">
                 <span class="date">{book.szerzo}</span>
             </div>
+            <div class="ui divider"></div>
             <div class="meta">
-                <img src={book.borito} alt={book.cim}>
+                <a href={book.link}><img src={book.borito} alt={book.cim}></a>
             </div>
             <div class="description">
-                <a href={book.link}>{book.leiras}</a>
+               {book.leiras}
             </div>
         </div>
     </div>
@@ -38,12 +39,12 @@
     <form action="?/addbook" class="ui form" method="POST">
         <div class="ui">
         <div class="ui input">
-            <div class="ui label">Cim</div>
+            <div class="ui label">Cím</div>
             <input type="text" name="cim">
         </div>
         <div class="ui divider"></div>
         <div class="ui input">
-            <div class="ui label">Szerzo</div>
+            <div class="ui label">Szerző</div>
             <input type="text" name="szerzo">
         </div>
         <div class="ui divider"></div>
@@ -58,8 +59,8 @@
         </div>
         <div class="ui divider"></div>
         <div class="ui input">
-            <div class="ui label">Leiras</div>
-            <input type="text" name="leiras">
+            <div class="ui label">Leirás</div>
+            <textarea id="mt1" type="text" name="leiras"></textarea>
         </div>
         <div class="ui divider"></div>
         <button class="ui button">Add book</button>
@@ -68,9 +69,30 @@
 {/if}
 
 <style>
+    div.label {
+        display: inline-block;
+        min-width: 80px;
+        text-align: left;
+        font-size: 16px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        box-shadow: 1px 1px 3px  gray;
+    }
     img {
-        width: 200px;
+        width: 250px;
         box-shadow: 1px 1px 5px black;
         border-radius: 7px;
+    }
+    textarea#mt1 {
+        width: 500px;
+        height: 250px;
+    }
+    div.description {
+        font-size: 12px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: justify;
+    }
+    div.cards {
+        display: inline-flex;
+        margin: auto;
     }
 </style>
