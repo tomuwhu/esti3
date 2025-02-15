@@ -4,9 +4,7 @@ import { env } from '$env/dynamic/private';
 if (!env.DATABASE_URL) throw new Error('DATABASE_URL is not set');
 const client = new Database(env.DATABASE_URL);
 export const db = drizzle(client);
-
-export * from '$lib/server/db/schema.js';
-
+import * as table from '$lib/server/db/schema';
 export const getallbooks = async () => {
     const results = await db.select().from(table.konyvek);
     return results;

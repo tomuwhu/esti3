@@ -1,9 +1,23 @@
+<script>
+    var { data } = $props()
+    var books = data.books
+    
+</script>
+
 <h1 class="ui header">Könyvek</h1>
 
-
-
-<style>
-    h1 {
-        box-shadow: 1px 1px 7px black;
-    }
-</style>
+<div class="ui cards">
+{#each books as book}
+    <div class="ui card">
+        <div class="content">
+            <div class="header">{book.cim}</div>
+            <div class="meta">
+                <span class="date">{book.szerzo}</span>
+            </div>
+            <div class="description">
+                <p>{book.leiras}</p>
+            </div>
+        </div>
+    </div>
+{/each}
+</div>
