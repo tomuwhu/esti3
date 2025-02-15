@@ -24,8 +24,11 @@
             <div class="meta">
                 <span class="date">{book.szerzo}</span>
             </div>
+            <div class="meta">
+                <img src={book.borito} alt={book.cim}>
+            </div>
             <div class="description">
-                <p>{book.leiras}</p>
+                <a href={book.link}>{book.leiras}</a>
             </div>
         </div>
     </div>
@@ -45,6 +48,16 @@
         </div>
         <div class="ui divider"></div>
         <div class="ui input">
+            <div class="ui label">Borító</div>
+            <input type="text" name="borito">
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui input">
+            <div class="ui label">Link</div>
+            <input type="text" name="link">
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui input">
             <div class="ui label">Leiras</div>
             <input type="text" name="leiras">
         </div>
@@ -53,3 +66,11 @@
         </div>
     </form>
 {/if}
+
+<style>
+    img {
+        width: 200px;
+        box-shadow: 1px 1px 5px black;
+        border-radius: 7px;
+    }
+</style>

@@ -10,8 +10,10 @@ export const actions = {
         const formData = await event.request.formData();
         const cim = formData.get('cim');
         const szerzo = formData.get('szerzo');
+        const borito = formData.get('borito');
+        const link = formData.get('link');
         const leiras = formData.get('leiras');
-        await addbook(cim, szerzo, leiras);
+        var id = await addbook(cim, szerzo, borito, link, leiras);
         return { success: true };
     },
     deletebook: async (event) => {

@@ -18,5 +18,7 @@ export const konyvek = sqliteTable("konyvek", {
     id: integer('id').primaryKey(),
     cim: text('cim'),
     szerzo: text('szerzo'),
+    borito: text('borito'),
+    link: text('link'),
     leiras: text('leiras')
 });
