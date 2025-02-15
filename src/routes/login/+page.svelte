@@ -5,7 +5,7 @@
 </script>
 
 <h1>Hi, {data.user.username}!</h1>
-<p>Your user ID is {data.user.id}.</p>
+<p>Your user admin is {data.user.admin}.</p>
 <form method='post' action='?/logout' use:enhance>
 	<button class="ui red button">Sign out</button>
 </form>

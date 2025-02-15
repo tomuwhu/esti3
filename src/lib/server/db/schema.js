@@ -4,7 +4,8 @@ export const user = sqliteTable('user', {
     id: text('id').primaryKey(),
     age: integer('age'),
     username: text('username').notNull().unique(),
-    passwordHash: text('password_hash').notNull()
+    passwordHash: text('password_hash').notNull(),
+    admin: integer('admin').notNull().default(0)
 });
 
 export const session = sqliteTable("session", {
@@ -14,7 +15,7 @@ export const session = sqliteTable("session", {
 });
 
 export const konyvek = sqliteTable("konyvek", {
-    id: text('id').primaryKey(),
+    id: integer('id').primaryKey(),
     cim: text('cim'),
     szerzo: text('szerzo'),
     leiras: text('leiras')

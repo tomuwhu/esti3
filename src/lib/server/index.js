@@ -11,14 +11,14 @@ export const getallbooks = async () => {
 };
 
 export const getbook = async (id) => {
-    const results = await db.select().from(table.konyvek).where(eq(table.konyvek.id, id));
+    const results = await db.select().from(table.konyvek).where(eq(table.konyvek.id, id))
     return results;
 };
 
 export const deletebook = async (id) => {
-    await db.delete(table.konyvek).where(eq(table.konyvek.id, id));
+    await db.delete(table.konyvek).where(eq(table.konyvek.id, id))
 };
 
 export const addbook = async (cim, szerzo, leiras) => {
-    await db.insert(table.konyvek).values({ cim, szerzo, leiras });
+    await db.insert(table.konyvek).values({ cim, szerzo, leiras }).returning();
 };
