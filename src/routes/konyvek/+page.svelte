@@ -36,8 +36,10 @@
 {/each}
 </div>
 {:else if funkcio == 1}
+<div class="ui container">
     <form action="?/addbook" class="ui form" method="POST">
         <div class="ui">
+        <div class="newbook">Új Könyv felvétele</div>
         <div class="ui input">
             <div class="ui label">Cím</div>
             <input type="text" name="cim">
@@ -63,9 +65,10 @@
             <textarea id="mt1" type="text" name="leiras"></textarea>
         </div>
         <div class="ui divider"></div>
-        <button class="ui button">Add book</button>
+        <button class="ui red button">Könyv rögzítése</button>
         </div>
     </form>
+</div>
 {/if}
 
 <style>
@@ -83,7 +86,7 @@
         border-radius: 7px;
     }
     textarea#mt1 {
-        width: 500px;
+        width: 340px;
         height: 250px;
     }
     div.description {
@@ -94,5 +97,22 @@
     div.cards {
         display: inline-flex;
         margin: auto;
+    }
+    div.container {
+        padding: 0px 0px 18px 0px;
+        margin: auto;
+        width: 550px;
+        background-color: rgb(193, 242, 225);
+        box-shadow: 1px 1px 5px black;
+        border-radius: 10px;
+    }
+    div.newbook {
+        font-size: 25px;
+        margin-top:0px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        border:solid 1px black;
+        background-color: aquamarine;
     }
 </style>
