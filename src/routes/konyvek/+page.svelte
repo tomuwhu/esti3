@@ -7,7 +7,7 @@
 
 <h1 class="ui header">Könyvek</h1>
 
-{#if user.admin == 1}
+{#if user?.admin == 1}
     {#if funkcio == 0}
         <button onclick={() => {funkcio = 1}} class="ui red button">Új könyv felvétele</button>
     {:else if funkcio == 1}
