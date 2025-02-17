@@ -14,8 +14,8 @@
 		<div class="ui label">Jelszó</div>
 		<input type='password' name='password' />
 	</div>
-	<button class="ui button">Login</button>
-	<button class="ui button" formaction='?/register'>Register</button>
+	<button class="ui button">Bejelentkezés</button>
+	<button class="ui button" formaction='?/register'>Regisztráció</button>
 </form>
 <p style='color: red'>{form?.message ?? ''}</p>
 <style>
