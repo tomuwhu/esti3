@@ -19,15 +19,15 @@
 <div class="ui cards">
 {#each books as book}
     <div class="ui card">
+        <div class="image">
+            <a target="_blank" href={book.link}><img src={book.borito} alt={book.cim}></a>
+        </div>
         <div class="content">
             <div class="header">{book.cim}</div>
             <div class="meta">
                 <span class="date">{book.szerzo}</span>
             </div>
             <div class="ui divider"></div>
-            <div class="meta">
-                <a href={book.link}><img src={book.borito} alt={book.cim}></a>
-            </div>
             <div class="description">
                {book.leiras}
             </div>
@@ -72,6 +72,12 @@
 {/if}
 
 <style>
+    div.image a {
+       display: inline-block;
+       padding-top: 17px;
+       padding-bottom: 12px;
+       min-height: 410px;
+    }
     div.cards {
         justify-content: center;
     }
