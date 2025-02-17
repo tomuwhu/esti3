@@ -72,6 +72,9 @@
 {/if}
 
 <style>
+    div.cards {
+        justify-content: center;
+    }
     div.label {
         display: inline-block;
         min-width: 80px;
