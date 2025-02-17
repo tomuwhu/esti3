@@ -14,13 +14,16 @@
 		user = data.user
   	})
 </script>
-<div>
+<div class="ui blue secondary pointing inverted menu">
 {#each menu as item}
-    {#if item.href === path || item.href + '/login' === path}
-		<a class="ui small blue button" href={item.href}>{item.label}</a>
-	{:else}
-		<a class="ui small button" href={item.href}>{item.label}</a>
-	{/if}
+	<div class="{item.href== '/login' ? 'right' : 'left'} menu">
+		{#if item.href === path || item.href + '/login' === path}
+			<a class="active item" href={item.href}>{item.label}</a>
+		{:else}
+			<a class="item" href={item.href}>{item.label}</a>
+		{/if}
+	</div>
 {/each}
 </div>
+
 {@render children()}
