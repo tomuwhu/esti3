@@ -2,3 +2,6 @@ body {
     background-color: antiquewhite;
     text-align: center;
 }
+h1, h3 {
+    text-shadow: 1px 1px 5px gray;
+}
